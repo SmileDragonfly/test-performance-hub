@@ -1,0 +1,40 @@
+server:
+  address: ":9090"
+  api_domain: ""
+  api_prefix: ""
+  enable_tls: false
+  cert_file: "./cert/tmsapac.com.pfx"
+  cert_password: "AF8032DABC311EE1F2E7D7DC1D0E0AB8"
+db:
+  driver: "sqlserver"
+  server: "192.168.66.51"
+  user: "7145F2BD073F752727FCAE75347929ED"
+  password: "1E503BE39269F324D667CBD4A59FAA39"
+  port: 1433
+  database: "PayGreen_Dev_Hub"
+error_message:
+  801: "Cannot process transaction"
+  802: "Hub internal error"
+  803: "Invalid request url"
+  804: "Serial number does not exist"
+  805: "Terminal does not have authorization"
+  806: "Terminal authorization was expired"
+  807: "Hub timeout"
+  808: "Invalid request format"
+  809: "Unexpected error"
+  810: "Invalid response code from processor"
+  811: "Processor response data is empty"
+  812: "Cannot connect to processor"
+  813: "Send request to processor failed"
+  814: "Send request to processor timeout"
+  815: "Read data from socket failed"
+  816: "Timeout. No response from processor"
+  817: "Invalid response format from processor"
+  818: "Invalid request format"
+  819: "Hub server time not synchronized"
+  820: "Terminal was disable in Hub and not allowed to do transaction"
+  821: "Terminal was not linked in Hub"
+  888: "Invalid transaction amount"
+time:
+  lock_duration: 120 #second
+  server_time_diff: 10 #second, if > 5 sec will return error 819

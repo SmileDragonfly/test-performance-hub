@@ -1,0 +1,8 @@
+{
+  "Type": "zap",
+  "FileName": "./logs/backend.log",
+  "MaxSize": 1,
+  "MaxBackups": 0,
+  "MaxAge": 0,
+  "Level": -1
+}
