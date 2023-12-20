@@ -1,0 +1,94 @@
+openapi: 3.0.0
+info:
+  title: Backend api for web config
+  version: 1.0.0
+servers:
+  - url: "http://localhost:9091"
+paths:
+  /create-test-data:
+    post:
+      summary: insert test data to db
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                prefix:
+                  type: string
+                number_of_hub:
+                  type: integer
+                terminal_per_hub:
+                  type: integer
+                shop_id:
+                  type: string
+                mode_id:
+                  type: string
+                os_version_id:
+                  type: string
+                processor_id:
+                  type: integer
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+        default:
+          description: fail
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+  /run-tests:
+    post:
+      summary: run test
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                delay_between_hubs:
+                  type: integer
+                  description: second
+                delay_between_terminals:
+                  type: integer
+                  description: second
+                duration:
+                  type: integer
+                  description: minute
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
+        default:
+          description: fail
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_message:
+                    type: string
