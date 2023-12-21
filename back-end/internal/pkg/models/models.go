@@ -124,3 +124,7 @@ type Token struct {
 	CreateDate    time.Time
 	ExpiryDate    time.Time
 }
+
+func (Terminal) TableName() string {
+	return "tblTerminal"
+}

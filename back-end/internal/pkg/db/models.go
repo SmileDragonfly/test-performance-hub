@@ -2,7 +2,7 @@ package db
 
 import (
 	"database/sql"
-	mssql "github.com/denisenkom/go-mssqldb"
+	mssql "github.com/microsoft/go-mssqldb"
 )
 
 // TerminalHub represents the structure of the "tblTerminalHub" table in SQL Server.
@@ -57,6 +57,10 @@ type Terminal struct {
 	ProcessorID      sql.NullInt64          `json:"ProcessorId"`      // Processor ID (nullable)
 	DeviceID         sql.NullString         `json:"DeviceID"`         // Device ID
 	TerminalHubID    mssql.UniqueIdentifier `json:"TerminalHubId"`    // Terminal Hub ID (nullable)
+}
+
+func (Terminal) TableName() string {
+	return "tblTerminal"
 }
 
 // HubTransaction represents the structure of the "tblHubTransaction" table in SQL Server.

@@ -1,9 +1,9 @@
 package db
 
 import (
-	"code/internal/pkg/models"
+	"backend/internal/pkg/models"
 	"context"
-	mssql "github.com/denisenkom/go-mssqldb"
+	mssql "github.com/microsoft/go-mssqldb"
 )
 
 // Get terminal hub id and terminal id by serie no

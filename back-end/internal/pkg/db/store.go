@@ -1,7 +1,7 @@
 package db
 
 import (
-	"code/internal/pkg/models"
+	"backend/internal/pkg/models"
 	"context"
 	"database/sql"
 	"errors"
