@@ -14,6 +14,10 @@ func main() {
 		panic(err)
 	}
 	terminal := db.Terminal{}
-	conn.First(&terminal)
-	fmt.Println(terminal)
+	terminalHub := db.TerminalHub{}
+	conn.Where("SerieNo = ?", "000141220404274").First(&terminal)
+	tx := conn.Where("Id = ?", terminal.TerminalHubId.String()).First(&terminalHub)
+	fmt.Println("Error:", tx.Error)
+	fmt.Println("Terminal:", terminal)
+	fmt.Println("TerminalHub:", terminalHub)
 }

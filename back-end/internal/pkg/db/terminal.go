@@ -11,13 +11,13 @@ func (q Queries) GetTerminalFromSerieNo(ctx context.Context, sSerieNo string) (*
 	query := `SELECT "Id", "ShopId", "TerminalID", "TerminalName", "SerieNo", "TerminalModelId", "OsVersionId", "Address1", "Address2", "City", "State", "Location", "NetworkType", "CreatedDate", "ActivedDate", "LastModifiedDate", "Deleted", "Status", "IsActive", "Zipcode", "ProcessorTID", "ProcessorId", "DeviceID", "TerminalHubId"
 FROM dbo.tblTerminal WHERE SerieNo = @p1 AND Status = 1 AND IsActive = 1`
 	var terminal Terminal
-	err := q.db.QueryRowContext(ctx, query, sSerieNo).Scan(&terminal.ID,
-		&terminal.ShopID,
+	err := q.db.QueryRowContext(ctx, query, sSerieNo).Scan(&terminal.Id,
+		&terminal.ShopId,
 		&terminal.TerminalID,
 		&terminal.TerminalName,
 		&terminal.SerieNo,
-		&terminal.TerminalModelID,
-		&terminal.OsVersionID,
+		&terminal.TerminalModelId,
+		&terminal.OsVersionId,
 		&terminal.Address1,
 		&terminal.Address2,
 		&terminal.City,
@@ -32,20 +32,20 @@ FROM dbo.tblTerminal WHERE SerieNo = @p1 AND Status = 1 AND IsActive = 1`
 		&terminal.IsActive,
 		&terminal.Zipcode,
 		&terminal.ProcessorTID,
-		&terminal.ProcessorID,
+		&terminal.ProcessorId,
 		&terminal.DeviceID,
-		&terminal.TerminalHubID)
+		&terminal.TerminalHubId)
 	if err != nil {
 		return nil, err
 	}
 	termRet := models.Terminal{
-		ID:               terminal.ID.String(),
-		ShopID:           terminal.ShopID.String(),
+		Id:               terminal.Id.String(),
+		ShopId:           terminal.ShopId.String(),
 		TerminalID:       terminal.TerminalID.String,
 		TerminalName:     terminal.TerminalName.String,
 		SerieNo:          terminal.SerieNo.String,
-		TerminalModelID:  terminal.TerminalModelID.String(),
-		OsVersionID:      terminal.OsVersionID.String(),
+		TerminalModelId:  terminal.TerminalModelId.String(),
+		OsVersionId:      terminal.OsVersionId.String(),
 		Address1:         terminal.Address1.String,
 		Address2:         terminal.Address2.String,
 		City:             terminal.City.String,
@@ -60,9 +60,9 @@ FROM dbo.tblTerminal WHERE SerieNo = @p1 AND Status = 1 AND IsActive = 1`
 		IsActive:         terminal.IsActive.Bool,
 		Zipcode:          terminal.Zipcode.String,
 		ProcessorTID:     terminal.ProcessorTID.String,
-		ProcessorID:      terminal.ProcessorID.Int64,
+		ProcessorId:      terminal.ProcessorId.Int64,
 		DeviceID:         terminal.DeviceID.String,
-		TerminalHubID:    terminal.TerminalHubID.String(),
+		TerminalHubId:    terminal.TerminalHubId.String(),
 	}
 	return &termRet, nil
 }

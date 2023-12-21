@@ -7,7 +7,7 @@ import (
 
 // TerminalHub represents the structure of the "tblTerminalHub" table in SQL Server.
 type TerminalHub struct {
-	ID                      mssql.UniqueIdentifier `json:"Id"`                      // Unique Identifier
+	Id                      mssql.UniqueIdentifier `json:"Id"`                      // Unique Identifier
 	TerminalHubID           sql.NullString         `json:"TerminalHubID"`           // Terminal Hub ID
 	ProcessorId             sql.NullInt64          `json:"ProcessorId"`             // Processor ID
 	Cassette1Denom          sql.NullInt64          `json:"Cassette1Denom"`          // Denomination for Cassette 1
@@ -31,16 +31,20 @@ type TerminalHub struct {
 	LastRunHealthCheck      sql.NullTime           `json:"LastRunHealthCheck"`
 }
 
+func (TerminalHub) TableName() string {
+	return "tblTerminalHub"
+}
+
 // Terminal represents the structure of the "tblTerminal" table in SQL Server.
 type Terminal struct {
-	ID               mssql.UniqueIdentifier `json:"Id"`               // Unique Identifier
-	ShopID           mssql.UniqueIdentifier `json:"ShopId"`           // Shop ID (nullable)
-	TerminalID       sql.NullString         `json:"TerminalID"`       // Terminal ID (Not Null)
+	Id               mssql.UniqueIdentifier `json:"Id"`               // Unique Identifier
+	ShopId           mssql.UniqueIdentifier `json:"ShopId"`           // Shop Id (nullable)
+	TerminalID       sql.NullString         `json:"TerminalID"`       // Terminal Id (Not Null)
 	TerminalName     sql.NullString         `json:"TerminalName"`     // Terminal Name
 	SerieNo          sql.NullString         `json:"SerieNo"`          // Serial Number
-	TerminalModelID  mssql.UniqueIdentifier `json:"TerminalModelId"`  // Terminal Model ID (Not Null)
-	OsVersionID      mssql.UniqueIdentifier `json:"OsVersionId"`      // OS Version ID (nullable)
-	Address1         sql.NullString         `json:"Address1"`         // Address Line 1
+	TerminalModelId  mssql.UniqueIdentifier `json:"TerminalModelId"`  // Terminal Model Id (Not Null)
+	OsVersionId      mssql.UniqueIdentifier `json:"OsVersionId"`      // OS Version Id (nullable)
+	Address1         sql.NullString         `json:"Address1" `        // Address Line 1
 	Address2         sql.NullString         `json:"Address2"`         // Address Line 2
 	City             sql.NullString         `json:"City"`             // City
 	State            sql.NullString         `json:"State"`            // State
@@ -53,10 +57,10 @@ type Terminal struct {
 	Status           sql.NullInt64          `json:"Status"`           // Status (Not Null)
 	IsActive         sql.NullBool           `json:"IsActive"`         // Is Active (Not Null)
 	Zipcode          sql.NullString         `json:"Zipcode"`          // Zipcode
-	ProcessorTID     sql.NullString         `json:"ProcessorTID"`     // Processor Terminal ID
-	ProcessorID      sql.NullInt64          `json:"ProcessorId"`      // Processor ID (nullable)
-	DeviceID         sql.NullString         `json:"DeviceID"`         // Device ID
-	TerminalHubID    mssql.UniqueIdentifier `json:"TerminalHubId"`    // Terminal Hub ID (nullable)
+	ProcessorTID     sql.NullString         `json:"ProcessorTID"`     // Processor Terminal Id
+	ProcessorId      sql.NullInt64          `json:"ProcessorId"`      // Processor Id (nullable)
+	DeviceID         sql.NullString         `json:"DeviceID"`         // Device Id
+	TerminalHubId    mssql.UniqueIdentifier `json:"TerminalHubId"`    // Terminal Hub Id (nullable)
 }
 
 func (Terminal) TableName() string {

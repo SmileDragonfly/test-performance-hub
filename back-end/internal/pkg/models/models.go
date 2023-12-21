@@ -32,13 +32,13 @@ type TerminalHub struct {
 
 // Terminal represents the structure of the "tblTerminal" table in SQL Server.
 type Terminal struct {
-	ID               string    `json:"Id"`               // Unique Identifier
-	ShopID           string    `json:"ShopId"`           // Shop ID (nullable)
-	TerminalID       string    `json:"TerminalID"`       // Terminal ID (Not Null)
+	Id               string    `json:"Id"`               // Unique Identifier
+	ShopId           string    `json:"ShopId"`           // Shop Id (nullable)
+	TerminalID       string    `json:"TerminalID"`       // Terminal Id (Not Null)
 	TerminalName     string    `json:"TerminalName"`     // Terminal Name
 	SerieNo          string    `json:"SerieNo"`          // Serial Number
-	TerminalModelID  string    `json:"TerminalModelId"`  // Terminal Model ID (Not Null)
-	OsVersionID      string    `json:"OsVersionId"`      // OS Version ID (nullable)
+	TerminalModelId  string    `json:"TerminalModelId"`  // Terminal Model Id (Not Null)
+	OsVersionId      string    `json:"OsVersionId"`      // OS Version Id (nullable)
 	Address1         string    `json:"Address1"`         // Address Line 1
 	Address2         string    `json:"Address2"`         // Address Line 2
 	City             string    `json:"City"`             // City
@@ -52,10 +52,10 @@ type Terminal struct {
 	Status           int64     `json:"Status"`           // Status (Not Null)
 	IsActive         bool      `json:"IsActive"`         // Is Active (Not Null)
 	Zipcode          string    `json:"Zipcode"`          // Zipcode
-	ProcessorTID     string    `json:"ProcessorTID"`     // Processor Terminal ID
-	ProcessorID      int64     `json:"ProcessorId"`      // Processor ID (nullable)
-	DeviceID         string    `json:"DeviceID"`         // Device ID
-	TerminalHubID    string    `json:"TerminalHubId"`    // Terminal Hub ID (nullable)
+	ProcessorTID     string    `json:"ProcessorTID"`     // Processor Terminal Id
+	ProcessorId      int64     `json:"ProcessorId"`      // Processor Id (nullable)
+	DeviceID         string    `json:"DeviceID"`         // Device Id
+	TerminalHubId    string    `json:"TerminalHubId"`    // Terminal Hub Id (nullable)
 }
 
 // HubTransaction represents the structure of the "tblHubTransaction" table in SQL Server.

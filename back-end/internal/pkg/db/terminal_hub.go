@@ -66,7 +66,7 @@ FROM dbo.tblTerminalHub WHERE Id = @p1`
 	if err != nil {
 		return nil, err
 	}
-	err = q.db.QueryRowContext(ctx, query, uuidTerminalHubID).Scan(&terminalHub.ID,
+	err = q.db.QueryRowContext(ctx, query, uuidTerminalHubID).Scan(&terminalHub.Id,
 		&terminalHub.TerminalHubID,
 		&terminalHub.ProcessorId,
 		&terminalHub.Cassette1Denom,
@@ -93,7 +93,7 @@ FROM dbo.tblTerminalHub WHERE Id = @p1`
 	}
 	// Map data
 	modelHub := models.TerminalHub{
-		ID:                      terminalHub.ID.String(),
+		ID:                      terminalHub.Id.String(),
 		TerminalHubID:           terminalHub.TerminalHubID.String,
 		ProcessorId:             terminalHub.ProcessorId.Int64,
 		Cassette1Denom:          terminalHub.Cassette1Denom.Int64,
@@ -160,7 +160,7 @@ func (q Queries) GetAllTerminalHub(ctx context.Context) ([]models.TerminalHub, e
 	var terminalHubs []models.TerminalHub
 	for rows.Next() {
 		var terminalHub TerminalHub
-		err = rows.Scan(&terminalHub.ID,
+		err = rows.Scan(&terminalHub.Id,
 			&terminalHub.TerminalHubID,
 			&terminalHub.ProcessorId,
 			&terminalHub.Cassette1Denom,
@@ -187,7 +187,7 @@ func (q Queries) GetAllTerminalHub(ctx context.Context) ([]models.TerminalHub, e
 		}
 		// Map data
 		modelHub := models.TerminalHub{
-			ID:                      terminalHub.ID.String(),
+			ID:                      terminalHub.Id.String(),
 			TerminalHubID:           terminalHub.TerminalHubID.String,
 			ProcessorId:             terminalHub.ProcessorId.Int64,
 			Cassette1Denom:          terminalHub.Cassette1Denom.Int64,
