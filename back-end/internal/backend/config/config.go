@@ -15,9 +15,6 @@ type Config struct {
 	DBPassword            string
 	DBPort                int
 	DBName                string
-	ErrorMessage          map[string]string
-	LockDuration          int
-	ServerTimeDiff        int
 	EncryptDataPassword   string
 	EncryptConfigPassword string
 }
@@ -45,9 +42,6 @@ func LoadConfig(sPath string) (*Config, error) {
 	config.DBPassword = viper.GetString("db.password")
 	config.DBPort = viper.GetInt("db.port")
 	config.DBName = viper.GetString("db.database")
-	config.ErrorMessage = viper.GetStringMapString("error_message")
-	config.LockDuration = viper.GetInt("time.lock_duration")
-	config.ServerTimeDiff = viper.GetInt("time.server_time_diff")
 	config.EncryptDataPassword = "US@PG#fu$CP%HM!2020&TMS"
 	config.EncryptConfigPassword = "4asm$mcrt@198tqk$"
 	return &config, nil

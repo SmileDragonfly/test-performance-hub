@@ -14,7 +14,7 @@ paths:
             schema:
               type: object
               properties:
-                prefix:
+                hub_prefix:
                   type: string
                 number_of_hub:
                   type: integer
@@ -38,7 +38,7 @@ paths:
                 properties:
                   error_code:
                     type: string
-                  error_message:
+                  error_desc:
                     type: string
         default:
           description: fail
@@ -49,7 +49,7 @@ paths:
                 properties:
                   error_code:
                     type: string
-                  error_message:
+                  error_desc:
                     type: string
   /run-tests:
     post:
@@ -60,6 +60,10 @@ paths:
             schema:
               type: object
               properties:
+                hub_prefix:
+                  type: string
+                number_of_hub:
+                  type: integer
                 delay_between_hubs:
                   type: integer
                   description: second
@@ -79,7 +83,7 @@ paths:
                 properties:
                   error_code:
                     type: string
-                  error_message:
+                  error_desc:
                     type: string
         default:
           description: fail
@@ -90,5 +94,39 @@ paths:
                 properties:
                   error_code:
                     type: string
-                  error_message:
+                  error_desc:
                     type: string
+  /delete-data-test/{hub_prefix}:
+    delete:
+      summary: delete data
+      parameters:
+        - name: hub_prefix
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_desc:
+                    type: string
+        default:
+          description: fail
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error_code:
+                    type: string
+                  error_desc:
+                    type: string
+
+

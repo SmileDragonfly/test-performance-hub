@@ -7,28 +7,28 @@ import (
 
 // TerminalHub represents the structure of the "tblTerminalHub" table in SQL Server.
 type TerminalHub struct {
-	Id                      mssql.UniqueIdentifier `json:"Id"`                      // Unique Identifier
-	TerminalHubID           sql.NullString         `json:"TerminalHubID"`           // Terminal Hub ID
-	ProcessorId             sql.NullInt64          `json:"ProcessorId"`             // Processor ID
-	Cassette1Denom          sql.NullInt64          `json:"Cassette1Denom"`          // Denomination for Cassette 1
-	Cassette2Denom          sql.NullInt64          `json:"Cassette2Denom"`          // Denomination for Cassette 2
-	Cassette1Remain         sql.NullInt64          `json:"Cassette1Remain"`         // Remaining Amount in Cassette 1
-	Cassette2Remain         sql.NullInt64          `json:"Cassette2Remain"`         // Remaining Amount in Cassette 2
-	TotalLowAmount          sql.NullInt64          `json:"TotalLowAmount"`          // Total Low Amount
-	WorkingKey              sql.NullString         `json:"WorkingKey"`              // Working Key
-	WorkingKeyInterval      sql.NullInt64          `json:"WorkingKeyInterval"`      // Working Key Interval
-	HealthCheckInterval     sql.NullInt64          `json:"HealthCheckInterval"`     // Health Check Interval
-	TxnDelayMin             sql.NullInt64          `json:"TxnDelayMin"`             // Minimum Transaction Delay
-	TxnDelayMax             sql.NullInt64          `json:"TxnDelayMax"`             // Maximum Transaction Delay
-	Surcharge               sql.NullFloat64        `json:"Surcharge"`               // Surcharge Amount
-	Status                  sql.NullBool           `json:"Status"`                  // Status (true - Active, false - Inactive)
-	Deleted                 sql.NullBool           `json:"Deleted"`                 // Deleted (true - Deleted, false - Not Deleted)
-	CreatedDate             sql.NullTime           `json:"CreatedDate"`             // Creation Date and Time
-	RequestTimeoutProcessor sql.NullInt64          `json:"RequestTimeoutProcessor"` // Request Timeout for Processor
-	RequestTimeoutTerminal  sql.NullInt64          `json:"RequestTimeoutTerminal"`  // Request Timeout for Terminal
-	CurrentTSQ              sql.NullInt64          `json:"CurrentTSQ"`              // Current Transaction Sequence Number
-	LastRunWorkingKey       sql.NullTime           `json:"LastRunWorkingKey"`
-	LastRunHealthCheck      sql.NullTime           `json:"LastRunHealthCheck"`
+	Id                      mssql.UniqueIdentifier `json:"Id" gorm:"column:Id"`
+	TerminalHubID           sql.NullString         `json:"TerminalHubID" gorm:"column:TerminalHubID"`
+	ProcessorId             sql.NullInt64          `json:"ProcessorId" gorm:"column:ProcessorId"`
+	Cassette1Denom          sql.NullInt64          `json:"Cassette1Denom" gorm:"column:Cassette1Denom"`
+	Cassette2Denom          sql.NullInt64          `json:"Cassette2Denom" gorm:"column:Cassette2Denom"`
+	Cassette1Remain         sql.NullInt64          `json:"Cassette1Remain" gorm:"column:Cassette1Remain"`
+	Cassette2Remain         sql.NullInt64          `json:"Cassette2Remain" gorm:"column:Cassette2Remain"`
+	TotalLowAmount          sql.NullInt64          `json:"TotalLowAmount" gorm:"column:TotalLowAmount"`
+	WorkingKey              sql.NullString         `json:"WorkingKey" gorm:"column:WorkingKey"`
+	WorkingKeyInterval      sql.NullInt64          `json:"WorkingKeyInterval" gorm:"column:WorkingKeyInterval"`
+	HealthCheckInterval     sql.NullInt64          `json:"HealthCheckInterval" gorm:"column:HealthCheckInterval"`
+	TxnDelayMin             sql.NullInt64          `json:"TxnDelayMin" gorm:"column:TxnDelayMin"`
+	TxnDelayMax             sql.NullInt64          `json:"TxnDelayMax" gorm:"column:TxnDelayMax"`
+	Surcharge               sql.NullFloat64        `json:"Surcharge" gorm:"column:Surcharge"`
+	Status                  sql.NullBool           `json:"Status" gorm:"column:Status"`
+	Deleted                 sql.NullBool           `json:"Deleted" gorm:"column:Deleted"`
+	CreatedDate             sql.NullTime           `json:"CreatedDate" gorm:"column:CreatedDate"`
+	RequestTimeoutProcessor sql.NullInt64          `json:"RequestTimeoutProcessor" gorm:"column:RequestTimeoutProcessor"`
+	RequestTimeoutTerminal  sql.NullInt64          `json:"RequestTimeoutTerminal" gorm:"column:RequestTimeoutTerminal"`
+	CurrentTSQ              sql.NullInt64          `json:"CurrentTSQ" gorm:"column:CurrentTSQ"`
+	LastRunWorkingKey       sql.NullTime           `json:"LastRunWorkingKey" gorm:"column:LastRunWorkingKey"`
+	LastRunHealthCheck      sql.NullTime           `json:"LastRunHealthCheck" gorm:"column:LastRunHealthCheck"`
 }
 
 func (TerminalHub) TableName() string {
@@ -37,30 +37,30 @@ func (TerminalHub) TableName() string {
 
 // Terminal represents the structure of the "tblTerminal" table in SQL Server.
 type Terminal struct {
-	Id               mssql.UniqueIdentifier `json:"Id"`               // Unique Identifier
-	ShopId           mssql.UniqueIdentifier `json:"ShopId"`           // Shop Id (nullable)
-	TerminalID       sql.NullString         `json:"TerminalID"`       // Terminal Id (Not Null)
-	TerminalName     sql.NullString         `json:"TerminalName"`     // Terminal Name
-	SerieNo          sql.NullString         `json:"SerieNo"`          // Serial Number
-	TerminalModelId  mssql.UniqueIdentifier `json:"TerminalModelId"`  // Terminal Model Id (Not Null)
-	OsVersionId      mssql.UniqueIdentifier `json:"OsVersionId"`      // OS Version Id (nullable)
-	Address1         sql.NullString         `json:"Address1" `        // Address Line 1
-	Address2         sql.NullString         `json:"Address2"`         // Address Line 2
-	City             sql.NullString         `json:"City"`             // City
-	State            sql.NullString         `json:"State"`            // State
-	Location         sql.NullString         `json:"Location"`         // Location
-	NetworkType      sql.NullInt64          `json:"NetworkType"`      // Network Type (Not Null)
-	CreatedDate      sql.NullTime           `json:"CreatedDate"`      // Creation Date and Time (Not Null)
-	ActivedDate      sql.NullTime           `json:"ActivedDate"`      // Activation Date and Time
-	LastModifiedDate sql.NullTime           `json:"LastModifiedDate"` // Last Modified Date and Time
-	Deleted          sql.NullBool           `json:"Deleted"`          // Deleted (Not Null)
-	Status           sql.NullInt64          `json:"Status"`           // Status (Not Null)
-	IsActive         sql.NullBool           `json:"IsActive"`         // Is Active (Not Null)
-	Zipcode          sql.NullString         `json:"Zipcode"`          // Zipcode
-	ProcessorTID     sql.NullString         `json:"ProcessorTID"`     // Processor Terminal Id
-	ProcessorId      sql.NullInt64          `json:"ProcessorId"`      // Processor Id (nullable)
-	DeviceID         sql.NullString         `json:"DeviceID"`         // Device Id
-	TerminalHubId    mssql.UniqueIdentifier `json:"TerminalHubId"`    // Terminal Hub Id (nullable)
+	Id               mssql.UniqueIdentifier `json:"Id" gorm:"column:Id"`
+	ShopId           mssql.UniqueIdentifier `json:"ShopId" gorm:"column:ShopId"`
+	TerminalID       sql.NullString         `json:"TerminalID" gorm:"column:TerminalID;not null"`
+	TerminalName     sql.NullString         `json:"TerminalName" gorm:"column:TerminalName"`
+	SerieNo          sql.NullString         `json:"SerieNo" gorm:"column:SerieNo"`
+	TerminalModelId  mssql.UniqueIdentifier `json:"TerminalModelId" gorm:"column:TerminalModelId;not null"`
+	OsVersionId      mssql.UniqueIdentifier `json:"OsVersionId" gorm:"column:OsVersionId"`
+	Address1         sql.NullString         `json:"Address1" gorm:"column:Address1"`
+	Address2         sql.NullString         `json:"Address2" gorm:"column:Address2"`
+	City             sql.NullString         `json:"City" gorm:"column:City"`
+	State            sql.NullString         `json:"State" gorm:"column:State"`
+	Location         sql.NullString         `json:"Location" gorm:"column:Location"`
+	NetworkType      sql.NullInt64          `json:"NetworkType" gorm:"column:NetworkType;not null"`
+	CreatedDate      sql.NullTime           `json:"CreatedDate" gorm:"column:CreatedDate;not null"`
+	ActivedDate      sql.NullTime           `json:"ActivedDate" gorm:"column:ActivedDate"`
+	LastModifiedDate sql.NullTime           `json:"LastModifiedDate" gorm:"column:LastModifiedDate"`
+	Deleted          sql.NullBool           `json:"Deleted" gorm:"column:Deleted;not null"`
+	Status           sql.NullInt64          `json:"Status" gorm:"column:Status;not null"`
+	IsActive         sql.NullBool           `json:"IsActive" gorm:"column:IsActive;not null"`
+	Zipcode          sql.NullString         `json:"Zipcode" gorm:"column:Zipcode"`
+	ProcessorTID     sql.NullString         `json:"ProcessorTID" gorm:"column:ProcessorTID"`
+	ProcessorId      sql.NullInt64          `json:"ProcessorId" gorm:"column:ProcessorId"`
+	DeviceID         sql.NullString         `json:"DeviceID" gorm:"column:DeviceID"`
+	TerminalHubId    mssql.UniqueIdentifier `json:"TerminalHubId" gorm:"column:TerminalHubId"`
 }
 
 func (Terminal) TableName() string {
@@ -107,23 +107,78 @@ type HubTxnLock struct {
 
 // Processor represents the structure of the "tblProcessor" table in SQL Server.
 type Processor struct {
-	ID             sql.NullInt64  `json:"Id"`             // Unique Identifier
-	ProcessorName  sql.NullString `json:"ProcessorName"`  // Processor Name
-	BIN            sql.NullString `json:"BIN"`            // BIN (Bank Identification Number)
-	IpAddress      sql.NullString `json:"IpAddress"`      // IP Address
-	Port           sql.NullInt64  `json:"Port"`           // Port
-	ProtocolTypeID sql.NullInt64  `json:"ProtocolTypeId"` // Protocol Type ID
-	EnableTLS      sql.NullBool   `json:"EnableTLS"`      // Enable TLS (true - Enabled, false - Disabled)
-	Description    sql.NullString `json:"Description"`    // Description
+	ID             sql.NullInt64  `json:"Id" gorm:"column:Id"`                         // Unique Identifier
+	ProcessorName  sql.NullString `json:"ProcessorName" gorm:"column:ProcessorName"`   // Processor Name
+	BIN            sql.NullString `json:"BIN" gorm:"column:BIN"`                       // BIN (Bank Identification Number)
+	IpAddress      sql.NullString `json:"IpAddress" gorm:"column:IpAddress"`           // IP Address
+	Port           sql.NullInt64  `json:"Port" gorm:"column:Port"`                     // Port
+	ProtocolTypeID sql.NullInt64  `json:"ProtocolTypeId" gorm:"column:ProtocolTypeId"` // Protocol Type ID
+	EnableTLS      sql.NullBool   `json:"EnableTLS" gorm:"column:EnableTLS"`           // Enable TLS (true - Enabled, false - Disabled)
+	Description    sql.NullString `json:"Description" gorm:"column:Description"`       // Description
+}
+
+func (Processor) TableName() string {
+	return "tblProcessor"
 }
 
 type Token struct {
-	ID            sql.NullInt64
-	TerminalID    sql.NullString
-	UserID        sql.NullString
-	Token         sql.NullString
-	FirebaseToken sql.NullString
-	IP            sql.NullString
-	CreateDate    sql.NullTime
-	ExpiryDate    sql.NullTime
+	ID            sql.NullInt64          `json:"ID" gorm:"column:ID"`
+	TerminalID    mssql.UniqueIdentifier `json:"TerminalID" gorm:"column:TerminalID"`
+	UserID        sql.NullString         `json:"UserID" gorm:"column:UserID"`
+	Token         sql.NullString         `json:"Token" gorm:"column:Token"`
+	FirebaseToken sql.NullString         `json:"FirebaseToken" gorm:"column:FirebaseToken"`
+	IP            sql.NullString         `json:"IP" gorm:"column:IP"`
+	CreateDate    sql.NullTime           `json:"CreateDate" gorm:"column:CreateDate"`
+	ExpiryDate    sql.NullTime           `json:"ExpiryDate" gorm:"column:ExpiryDate"`
+}
+
+func (Token) TableName() string {
+	return "tblAPIToken"
+}
+
+type Shop struct {
+	ID           mssql.UniqueIdentifier `json:"Id" gorm:"column:Id;type:uniqueidentifier"`
+	MerchantID   mssql.UniqueIdentifier `json:"MerchantId" gorm:"column:MerchantId;type:uniqueidentifier"`
+	Name         sql.NullString         `json:"Name" gorm:"column:Name;type:nvarchar(100)"`
+	Address1     sql.NullString         `json:"Address1" gorm:"column:Address1;type:nvarchar(500)"`
+	Address2     sql.NullString         `json:"Address2" gorm:"column:Address2;type:nvarchar(200)"`
+	City         sql.NullString         `json:"City" gorm:"column:City;type:nvarchar(100)"`
+	State        sql.NullString         `json:"State" gorm:"column:State;type:nvarchar(100)"`
+	Phone        sql.NullString         `json:"Phone" gorm:"column:Phone;type:varchar(50)"`
+	Zipcode      sql.NullString         `json:"Zipcode" gorm:"column:Zipcode;type:varchar(20)"`
+	Email        sql.NullString         `json:"Email" gorm:"column:Email;type:nvarchar(500)"`
+	TimeZone     sql.NullString         `json:"TimeZone" gorm:"column:TimeZone;type:nvarchar(100)"`
+	TimezoneName sql.NullString         `json:"TimezoneName" gorm:"column:TimezoneName;type:nvarchar(100)"`
+	EmailTime    sql.NullString         `json:"EmailTime" gorm:"column:EmailTime;type:varchar(8)"`
+	CreatedAt    sql.NullTime           `json:"CreatedAt" gorm:"column:CreatedAt"`
+	UpdatedAt    sql.NullTime           `json:"UpdatedAt" gorm:"column:UpdatedAt"`
+	DeletedAt    sql.NullTime           `json:"DeletedAt" gorm:"column:DeletedAt"`
+}
+
+// TableName specifies the table name for the YourStructName model.
+func (Shop) TableName() string {
+	return "tblShop"
+}
+
+type TerminalModel struct {
+	ID       mssql.UniqueIdentifier `json:"Id" gorm:"column:Id;type:uniqueidentifier"`
+	VendorID mssql.UniqueIdentifier `json:"VendorId" gorm:"column:VendorId;type:uniqueidentifier"`
+	Code     sql.NullString         `json:"Code" gorm:"column:Code;type:varchar(50)"`
+	Name     sql.NullString         `json:"Name" gorm:"column:Name;type:nvarchar(100)"`
+}
+
+// TableName specifies the table name for the YourStructName model.
+func (TerminalModel) TableName() string {
+	return "tblTerminalModel"
+}
+
+type OsVersion struct {
+	ID        mssql.UniqueIdentifier `json:"Id" gorm:"column:Id;type:uniqueidentifier"`
+	Name      sql.NullString         `json:"Name" gorm:"column:Name;type:varchar(100)"`
+	VersionNo sql.NullString         `json:"VersionNo" gorm:"column:VersionNo;type:varchar(50)"`
+}
+
+// TableName specifies the table name for the YourStructName model.
+func (OsVersion) TableName() string {
+	return "tblOsVersion"
 }

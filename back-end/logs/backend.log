@@ -1,0 +1,541 @@
+2023-12-21 00:14:46.462	[INFO]	==================================================
+2023-12-21 00:14:46.463	[INFO]	Start logger succesfully
+2023-12-21 00:15:08.294	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[209] Content-Type:[application/json] Postman-Token:[ddd7c381-1ffa-40ca-ba22-5a4b0780a77f] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": "<integer>",
+  "terminal_per_hub": "<integer>",
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": "<integer>"
+}
+2023-12-21 00:15:08.295	[ERROR]	CreateTestData: json: cannot unmarshal string into Go struct field RequestCreateTestData.number_of_hub of type int
+2023-12-21 00:15:08.301	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"json: cannot unmarshal string into Go struct field RequestCreateTestData.number_of_hub of type int"}
+2023-12-21 00:15:23.868	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[189] Content-Type:[application/json] Postman-Token:[b1824289-2ed0-4ce9-86ba-4d84a707cfdc] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": "<integer>"
+}
+2023-12-21 00:15:23.870	[ERROR]	CreateTestData: json: cannot unmarshal string into Go struct field RequestCreateTestData.processor_id of type int
+2023-12-21 00:15:23.870	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"json: cannot unmarshal string into Go struct field RequestCreateTestData.processor_id of type int"}
+2023-12-21 00:15:31.749	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[179] Content-Type:[application/json] Postman-Token:[d1e642dd-ce3d-4a09-917b-5039a42b9950] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:16:03.398	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[179] Content-Type:[application/json] Postman-Token:[efe72008-b4e0-411a-82ff-4aadb7d2010d] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:16:09.110	[INFO]	==================================================
+2023-12-21 00:16:09.110	[INFO]	Start logger succesfully
+2023-12-21 00:16:12.199	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[179] Content-Type:[application/json] Postman-Token:[3a4df7e8-9de6-476a-a3f9-e64bb2fb6232] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:17:11.183	[INFO]	==================================================
+2023-12-21 00:17:11.183	[INFO]	Start logger succesfully
+2023-12-21 00:17:14.632	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[179] Content-Type:[application/json] Postman-Token:[a1147811-8e9c-4581-9818-986068296eec] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "<string>",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:17:31.498	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.HubPrefix' Error:Field validation for 'HubPrefix' failed on the 'len' tag
+Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:17:31.998	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.HubPrefix' Error:Field validation for 'HubPrefix' failed on the 'len' tag\nKey: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:17:49.346	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[175] Content-Type:[application/json] Postman-Token:[e6ecc9e6-87a5-4bef-a97d-b80c16ac82f9] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "<string>",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:17:53.814	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:17:53.815	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:18:33.959	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[b4048f48-60cb-4e6f-a6c1-11bc6c3b4e16] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:18:33.959	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:18:33.960	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:19:01.126	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[201] Content-Type:[application/json] Postman-Token:[0e024115-365c-432b-8077-099740fcd490] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": 2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44,
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:19:01.127	[ERROR]	CreateTestData: invalid character 'D' after object key:value pair
+2023-12-21 00:19:01.128	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"invalid character 'D' after object key:value pair"}
+2023-12-21 00:19:09.091	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[754294a5-c5dc-4d9f-86d9-8bb2c5989e2c] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:19:09.093	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:19:09.093	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:24:09.857	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[4f3e93f1-f4b6-49dd-88b7-ca2db9c21d83] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "476e1336-9fda-11ee-8c90-0242ac120002",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:24:09.860	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:24:09.860	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:24:27.349	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[e748714c-b99a-4fd9-bb0c-7fbf840c431d] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:24:27.349	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:24:27.350	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:25:39.370	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[87472939-0b9e-4963-ba7d-68e2722c94d9] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:25:39.371	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:25:39.372	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:26:09.962	[INFO]	==================================================
+2023-12-21 00:26:09.962	[INFO]	Start logger succesfully
+2023-12-21 00:26:17.254	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[b7f5e548-62f8-41c4-bb53-8aab60b0dac4] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:26:45.618	[INFO]	==================================================
+2023-12-21 00:26:45.619	[INFO]	Start logger succesfully
+2023-12-21 00:26:48.873	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[092211f1-5510-4aca-a597-722387726fa4] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "2DCCA213-D4F4-4203-A4D6-DBB7C4EA1F44",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:26:48.875	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid4' tag
+Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:26:48.875	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ShopId' Error:Field validation for 'ShopId' failed on the 'uuid4' tag\nKey: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:27:09.675	[INFO]	==================================================
+2023-12-21 00:27:09.676	[INFO]	Start logger succesfully
+2023-12-21 00:27:54.246	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[203] Content-Type:[application/json] Postman-Token:[911c3d8d-48be-49a9-9ab7-bb4eba44ea01] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "mode_id": "<string>",
+  "os_version_id": "<string>",
+  "processor_id": 1
+}
+2023-12-21 00:27:54.247	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag
+Key: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag
+2023-12-21 00:27:54.247	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ModeId' Error:Field validation for 'ModeId' failed on the 'uuid' tag\nKey: 'RequestCreateTestData.OsVersionId' Error:Field validation for 'OsVersionId' failed on the 'uuid' tag"}
+2023-12-21 00:28:08.214	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[fd075fba-23dd-4746-b927-74ad66156d8f] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 00:28:08.246	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 00:31:36.083	[INFO]	==================================================
+2023-12-21 00:31:36.083	[INFO]	Start logger succesfully
+2023-12-21 00:31:38.581	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[1fa6bfed-adf4-421c-a65a-5db552971c98] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 00:31:38.630	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 00:31:53.856	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[ee0767b2-ef0f-481f-99e1-4bfb62817968] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 00:31:53.974	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 00:56:40.562	[INFO]	==================================================
+2023-12-21 00:56:40.562	[INFO]	Start logger succesfully
+2023-12-21 00:56:44.665	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[d35f6b8c-2876-43af-a9bf-6b4af242c43b] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 00:56:51.239	[ERROR]	CreateTestData: Create hub failed: {TEST0000 %!s(bool=true)}
+2023-12-21 00:56:51.239	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 01:04:49.606	[INFO]	==================================================
+2023-12-21 01:04:49.606	[INFO]	Start logger succesfully
+2023-12-21 01:04:52.568	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[964d0ed9-496a-40fc-9f31-b973e287d3cb] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 01:04:59.037	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 01:05:13.425	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[f85defbc-bfba-4be0-95eb-78ffbe3fcc10] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 01:05:13.436	[ERROR]	CreateTestData: Prefix existed
+2023-12-21 01:05:13.436	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix existed"}
+2023-12-21 01:05:27.286	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[1585ac30-0a95-4892-bb3e-eb8574ee1446] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 01:05:29.746	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 01:08:22.860	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[3f7c9527-7636-40e1-9107-1debfb1d4153] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 01:08:22.898	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:15:22.909	[INFO]	==================================================
+2023-12-21 02:15:22.910	[INFO]	Start logger succesfully
+2023-12-21 02:15:25.637	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[f6138760-186a-4d8b-9c36-8f5997ae1964] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:15:25.649	[ERROR]	CreateTestData: Prefix existed
+2023-12-21 02:15:25.650	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix existed"}
+2023-12-21 02:16:13.307	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[53ec39b6-0bbe-4af8-abdd-0964d0784b17] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:16:13.357	[ERROR]	CreateTestData: [{TEST0000 %!s(bool=true)}]Create terminal failed: {{TEST0000 %!s(bool=true)}0000 %!s(bool=true)}
+2023-12-21 02:16:13.357	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:18:18.653	[INFO]	==================================================
+2023-12-21 02:18:18.654	[INFO]	Start logger succesfully
+2023-12-21 02:18:24.376	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[dcc557d5-4319-4db8-b488-c4bdba413e7c] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:18:24.421	[ERROR]	CreateTestData: [{TEST0000 %!s(bool=true)}]Create terminal failed: {{TEST0000 %!s(bool=true)}0000 %!s(bool=true)}
+2023-12-21 02:18:24.421	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:20:01.828	[INFO]	==================================================
+2023-12-21 02:20:01.828	[INFO]	Start logger succesfully
+2023-12-21 02:20:04.040	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[c02ea875-d113-41b9-a176-0fb6f22ec398] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:20:04.051	[ERROR]	CreateTestData: Prefix existed
+2023-12-21 02:20:04.052	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix existed"}
+2023-12-21 02:20:32.291	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[e8f79aa6-b6b8-4434-a369-a1ead52d4529] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:20:32.354	[ERROR]	CreateTestData: [{TEST0000 %!s(bool=true)}]Create terminal failed: {{TEST0000 %!s(bool=true)}0000 %!s(bool=true)}
+2023-12-21 02:20:32.354	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:21:01.029	[INFO]	==================================================
+2023-12-21 02:21:01.029	[INFO]	Start logger succesfully
+2023-12-21 02:21:12.625	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[75a00080-40d6-44be-ad5a-0cbed7ae9ff4] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:21:12.670	[ERROR]	CreateTestData: [{TEST0000 %!s(bool=true)}]Create terminal failed: {{TEST0000 %!s(bool=true)}0000 %!s(bool=true)}
+2023-12-21 02:21:12.670	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:33:37.159	[INFO]	==================================================
+2023-12-21 02:33:37.159	[INFO]	Start logger succesfully
+2023-12-21 02:33:39.628	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[0da23ce9-1943-4afb-a120-8943c8aa33bd] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:33:39.636	[ERROR]	CreateTestData: Prefix existed
+2023-12-21 02:33:39.637	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix existed"}
+2023-12-21 02:33:57.591	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[94880c50-7a5d-43fc-af07-bb9b5e0351f3] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:33:57.666	[ERROR]	CreateTestData: [TEST0000]Create terminal failed: {TEST0000 %!s(bool=true)}0000
+2023-12-21 02:33:57.666	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:35:32.849	[INFO]	==================================================
+2023-12-21 02:35:32.850	[INFO]	Start logger succesfully
+2023-12-21 02:35:34.932	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[b8c8e9f6-4b9d-4b46-a771-c4df26a04a4b] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:35:40.356	[ERROR]	CreateTestData: record not found
+2023-12-21 02:35:40.356	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"record not found"}
+2023-12-21 02:36:53.691	[INFO]	==================================================
+2023-12-21 02:36:53.691	[INFO]	Start logger succesfully
+2023-12-21 02:37:01.362	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[19ef153d-574a-4e78-93db-8d18431154c1] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:37:06.000	[ERROR]	CreateTestData: Invalid shop id: record not found
+2023-12-21 02:37:06.000	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"record not found"}
+2023-12-21 02:39:16.223	[INFO]	==================================================
+2023-12-21 02:39:16.223	[INFO]	Start logger succesfully
+2023-12-21 02:39:18.954	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[4013cd41-4580-475f-ac01-eb9c729b7fcb] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "7C293840-7D71-4D56-83B5-280278758DB1",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:39:18.967	[ERROR]	CreateTestData: Invalid shop id: record not found
+2023-12-21 02:39:18.967	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Invalid shop id: record not found"}
+2023-12-21 02:39:50.318	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[7976f51a-7512-4523-a52d-3662026d0f38] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:39:50.340	[ERROR]	CreateTestData: Invalid model id: record not found
+2023-12-21 02:39:50.340	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Invalid model id: record not found"}
+2023-12-21 02:40:06.316	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[20e7b167-fb12-4b75-b9b8-c8cbdfba3447] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "43e0af9c-a08b-4c5f-8721-06b11abb47d9",
+  "processor_id": 1
+}
+2023-12-21 02:40:06.341	[ERROR]	CreateTestData: Invalid os version id: record not found
+2023-12-21 02:40:06.341	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Invalid os version id: record not found"}
+2023-12-21 02:40:26.337	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[63e5db0a-7d3a-4c49-b068-170357d20dde] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 0
+}
+2023-12-21 02:40:26.339	[ERROR]	CreateTestData: Key: 'RequestCreateTestData.ProcessorId' Error:Field validation for 'ProcessorId' failed on the 'required' tag
+2023-12-21 02:40:26.339	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Key: 'RequestCreateTestData.ProcessorId' Error:Field validation for 'ProcessorId' failed on the 'required' tag"}
+2023-12-21 02:40:37.380	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[261] Content-Type:[application/json] Postman-Token:[3b24f15b-6896-49fa-aa9a-b02bb41e3d8a] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 100
+}
+2023-12-21 02:40:37.418	[ERROR]	CreateTestData: Invalid prcessor id: record not found
+2023-12-21 02:40:37.418	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Invalid prcessor id:: record not found"}
+2023-12-21 02:40:42.201	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[260] Content-Type:[application/json] Postman-Token:[fae52fea-b382-41d6-aa3f-ef90d414cb92] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 12
+}
+2023-12-21 02:40:42.231	[ERROR]	CreateTestData: Invalid prcessor id: record not found
+2023-12-21 02:40:42.231	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Invalid prcessor id:: record not found"}
+2023-12-21 02:40:47.534	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[bb491876-b1da-4e6b-8214-6a57aadebd3e] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 2
+}
+2023-12-21 02:40:47.631	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 02:44:25.185	[INFO]	==================================================
+2023-12-21 02:44:25.185	[INFO]	Start logger succesfully
+2023-12-21 02:44:27.428	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[e5d1611d-a6e5-45dd-925e-5780232fd394] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 2
+}
+2023-12-21 02:44:27.437	[ERROR]	CreateTestData: Prefix existed
+2023-12-21 02:44:27.438	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix existed"}
+2023-12-21 02:44:56.639	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[d4613f1a-2a96-4b8a-b79e-06c0cb76ea8d] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "terminal_per_hub": 1,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 2
+}
+2023-12-21 02:44:56.848	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[]-Status:200-Body:
+2023-12-21 03:09:26.446	[INFO]	==================================================
+2023-12-21 03:09:26.446	[INFO]	Start logger succesfully
+2023-12-21 03:09:37.504	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[80937f6f-03aa-4bbb-9e87-78dec6b19464] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:09:37.504	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[]-Status:200-Body:
+2023-12-21 03:10:34.099	[INFO]	==================================================
+2023-12-21 03:10:34.100	[INFO]	Start logger succesfully
+2023-12-21 03:10:37.964	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[1f312a29-93af-4b0a-ade8-e1c93917d540] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:10:38.049	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-21 03:11:52.099	[INFO]	==================================================
+2023-12-21 03:11:52.100	[INFO]	Start logger succesfully
+2023-12-21 03:12:20.563	[INFO]	Logger: Request: ClientIP:::1-Path:/create-test-data-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[259] Content-Type:[application/json] Postman-Token:[eb3e7366-506e-48e9-a7f0-6869e83a2916] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 2,
+  "terminal_per_hub": 3,
+  "shop_id": "B8AC488F-CE5A-429E-A7A0-0054696C0742",
+  "mode_id": "8911C86F-AC6C-4A6F-8C52-8B4D40D27D06",
+  "os_version_id": "37BC4368-1CC8-4680-BD28-7E9726C83376",
+  "processor_id": 2
+}
+2023-12-21 03:12:20.853	[INFO]	Logger: Response: ClientIP:::1-Path:/create-test-data-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-21 03:13:17.743	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[cdcad548-95e6-4409-ad67-a58b50d2bf56] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:13:18.111	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-21 03:13:37.359	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[9675fd91-2d6a-49f7-b09b-f3d9ed3ac597] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:13:37.366	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-21 03:14:14.944	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[42b23a6b-5798-41c8-aa3a-0473324fc71d] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:14:44.419	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-21 03:15:08.623	[INFO]	==================================================
+2023-12-21 03:15:08.623	[INFO]	Start logger succesfully
+2023-12-21 03:15:14.308	[INFO]	Logger: Request: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Postman-Token:[085aa911-056c-46f6-a1be-b8e3967d3bd0] User-Agent:[PostmanRuntime/7.36.0]]-Body:
+2023-12-21 03:15:14.316	[ERROR]	DeleteTestData: Prefix doesn't exist
+2023-12-21 03:15:14.317	[INFO]	Logger: Response: ClientIP:::1-Path:/delete-data-test/TEST-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:400-Body:{"error_code":400,"error_desc":"Prefix doesn't exist"}
