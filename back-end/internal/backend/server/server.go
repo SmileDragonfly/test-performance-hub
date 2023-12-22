@@ -307,7 +307,89 @@ func (s *Server) CreateTestData(ctx *gin.Context) {
 }
 
 func (s *Server) RunTests(ctx *gin.Context) {
-
+	var req RequestRunTests
+	err := ctx.ShouldBindJSON(&req)
+	if err != nil {
+		logger.ErrorFuncf("%s", err)
+		ctx.JSON(HttpError(http.StatusBadRequest, err.Error()))
+		return
+	}
+	// Check mode run: duration or iteration
+	// Duration: run for period of time
+	// Iteration: send number of requests then stop
+	if req.Duration < 1 && req.Iteration < 1 {
+		logger.ErrorFuncf("Need duration > 1 or iteration > 1")
+		ctx.JSON(HttpError(http.StatusBadRequest, "Need duration > 1 or iteration > 1"))
+		return
+	}
+	// Get all hub
+	hubs := []db.TerminalHub{}
+	tx := s.store.Where("TerminalHubID LIKE ?", req.HubPrefix+"%").Find(&hubs)
+	if len(hubs) == 0 {
+		logger.ErrorFuncf("Prefix doesn't exist")
+		ctx.JSON(HttpError(http.StatusBadRequest, "Prefix doesn't exist"))
+		return
+	}
+	if !errors.Is(tx.Error, nil) {
+		logger.ErrorFuncf("%s", err.Error())
+		ctx.JSON(HttpError(http.StatusBadRequest, err.Error()))
+		return
+	}
+	// Loop all hubs to run
+	for _, hub := range hubs {
+		go func(terminalHub db.TerminalHub) {
+			// Get all terminal linked to hub
+			logger.InfoFuncf("[%s]Start goroutine for hub", terminalHub.TerminalHubID.String)
+			terminals := []db.Terminal{}
+			tx = s.store.Where("TerminalHubId = ?", terminalHub.Id.String()).Find(&terminals)
+			if tx.Error != nil {
+				logger.ErrorFuncf("[%s]Find terminal error: %s", terminalHub.TerminalHubID.String, err)
+				return
+			}
+			for _, terminal := range terminals {
+				go func(hub db.TerminalHub, terminal db.Terminal) {
+					logger.InfoFuncf("[%s]Start goroutine for terminal %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String)
+					startTime := time.Now()
+					count := 0
+					// 1. Call get working key
+					for {
+						err := s.GetWorkingKey(terminalHub, terminal, req)
+						if err != nil {
+							logger.ErrorFuncf("[%s]Get working key for %s failed: %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String, err.Error())
+						} else {
+							// 2. Call process transaction and process transaction check if need
+							err = s.ProcessTransaction(terminalHub, terminal, req)
+							if err != nil {
+								logger.ErrorFuncf("[%s]Process transaction for %s failed: %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String, err.Error())
+							}
+						}
+						count++
+						if req.DelayBetweenRequests > 0 {
+							time.Sleep(time.Duration(req.DelayBetweenRequests) * time.Second)
+						}
+						if req.Duration > 0 {
+							if int(time.Now().Sub(startTime).Minutes()) > req.Duration {
+								logger.InfoFuncf("[%s]Duration stop goroutine for terminal %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String)
+								break
+							}
+						}
+						if req.Iteration == count {
+							logger.InfoFuncf("[%s]Iteration stop goroutine for terminal %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String)
+							break
+						}
+					}
+				}(terminalHub, terminal)
+				if req.DelayBetweenTerminals > 0 {
+					time.Sleep(time.Duration(req.DelayBetweenTerminals) * time.Second)
+				}
+			}
+		}(hub)
+		if req.DelayBetweenHubs > 0 {
+			time.Sleep(time.Duration(req.DelayBetweenHubs) * time.Second)
+		}
+	}
+	ctx.JSON(HttpError(http.StatusOK, "Success"))
+	return
 }
 
 func (s *Server) DeleteTestData(ctx *gin.Context) {

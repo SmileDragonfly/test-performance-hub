@@ -70,9 +70,18 @@ paths:
                 delay_between_terminals:
                   type: integer
                   description: second
+                delay_between_requests:
+                  type: integer
+                  description: second
                 duration:
                   type: integer
                   description: minute
+                iteration:
+                  type: integer
+                  description: number of requests for each hub
+                hub_url:
+                  type: string
+                  description: url to hub server
       responses:
         200:
           description: success
