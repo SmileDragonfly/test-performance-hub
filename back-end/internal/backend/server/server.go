@@ -353,6 +353,7 @@ func (s *Server) RunTests(ctx *gin.Context) {
 					count := 0
 					// 1. Call get working key
 					for {
+						logger.InfoFuncf("[%s]Start transaction %d for terminal: %s", terminalHub.TerminalHubID.String, count+1, terminal.TerminalID.String)
 						err := s.GetWorkingKey(terminalHub, terminal, req)
 						if err != nil {
 							logger.ErrorFuncf("[%s]Get working key for %s failed: %s", terminalHub.TerminalHubID.String, terminal.TerminalID.String, err.Error())
