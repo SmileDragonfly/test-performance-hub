@@ -324,7 +324,7 @@ func (s *Server) RunTests(ctx *gin.Context) {
 	}
 	// Get all hub
 	hubs := []db.TerminalHub{}
-	tx := s.store.Where("TerminalHubID LIKE ?", req.HubPrefix+"%").Find(&hubs)
+	tx := s.store.Limit(req.NumberOfHub).Where("TerminalHubID LIKE ?", req.HubPrefix+"%").Find(&hubs)
 	if len(hubs) == 0 {
 		logger.ErrorFuncf("Prefix doesn't exist")
 		ctx.JSON(HttpError(http.StatusBadRequest, "Prefix doesn't exist"))
