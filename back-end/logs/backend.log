@@ -1747,3 +1747,81 @@
 2023-12-25 19:35:51.030	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880004
 2023-12-25 19:35:53.131	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880003 success
 2023-12-25 19:35:53.131	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880003
+2023-12-26 01:52:15.973	[INFO]	==================================================
+2023-12-26 01:52:15.973	[INFO]	Start logger succesfully
+2023-12-26 02:11:02.418	[INFO]	Logger: Request: ClientIP:::1-Path:/run-tests-Header:map[Accept:[application/json] Accept-Encoding:[gzip, deflate, br] Connection:[keep-alive] Content-Length:[217] Content-Type:[application/json] Postman-Token:[06bdb77d-4578-4590-92d5-d1d096f6d30d] User-Agent:[PostmanRuntime/7.36.0]]-Body:{
+  "hub_prefix": "TEST",
+  "number_of_hub": 1,
+  "delay_between_hubs": 0,
+  "delay_between_terminals": 0,
+  "delay_between_requests":0,
+  "duration": 10,
+  "iteration": 5,
+  "hub_url": "https://118.70.124.128:9090"
+}
+2023-12-26 02:11:02.434	[INFO]	func1: [TEST0088]Start goroutine for hub
+2023-12-26 02:11:02.435	[INFO]	Logger: Response: ClientIP:::1-Path:/run-tests-Header:map[Content-Type:[application/json; charset=utf-8]]-Status:200-Body:{"error_code":200,"error_desc":"Success"}
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start goroutine for terminal TEST00880004
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start goroutine for terminal TEST00880001
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start goroutine for terminal TEST00880002
+2023-12-26 02:11:02.445	[INFO]	1: [TEST0088]Start transaction 1 for terminal: TEST00880002
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start goroutine for terminal TEST00880003
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start goroutine for terminal TEST00880000
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start transaction 1 for terminal: TEST00880004
+2023-12-26 02:11:02.444	[INFO]	1: [TEST0088]Start transaction 1 for terminal: TEST00880001
+2023-12-26 02:11:02.445	[INFO]	1: [TEST0088]Start transaction 1 for terminal: TEST00880003
+2023-12-26 02:11:02.445	[INFO]	1: [TEST0088]Start transaction 1 for terminal: TEST00880000
+2023-12-26 02:11:02.895	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880002 success
+2023-12-26 02:11:02.895	[INFO]	1: [TEST0088]Start transaction 2 for terminal: TEST00880002
+2023-12-26 02:11:40.958	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880001 success
+2023-12-26 02:11:40.958	[INFO]	1: [TEST0088]Start transaction 2 for terminal: TEST00880001
+2023-12-26 02:12:11.048	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880003 success
+2023-12-26 02:12:11.049	[INFO]	1: [TEST0088]Start transaction 2 for terminal: TEST00880003
+2023-12-26 02:12:19.035	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880002 success
+2023-12-26 02:12:19.035	[INFO]	1: [TEST0088]Start transaction 3 for terminal: TEST00880002
+2023-12-26 02:12:48.120	[INFO]	ProcessTransaction: [TEST0088]Process transaction for TEST00880001 success
+2023-12-26 02:12:48.120	[INFO]	1: [TEST0088]Start transaction 3 for terminal: TEST00880001
+2023-12-26 02:12:52.810	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880000 success
+2023-12-26 02:12:52.812	[INFO]	1: [TEST0088]Start transaction 2 for terminal: TEST00880000
+2023-12-26 02:13:22.843	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880004 success
+2023-12-26 02:13:22.844	[INFO]	1: [TEST0088]Start transaction 2 for terminal: TEST00880004
+2023-12-26 02:14:01.281	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880003 success
+2023-12-26 02:14:01.281	[INFO]	1: [TEST0088]Start transaction 3 for terminal: TEST00880003
+2023-12-26 02:14:29.289	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880002 success
+2023-12-26 02:14:29.289	[INFO]	1: [TEST0088]Start transaction 4 for terminal: TEST00880002
+2023-12-26 02:15:03.029	[ERROR]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880000 failed: No response from host to PayGreen Hub. Please check customer account to ensure no double charges
+2023-12-26 02:15:03.029	[ERROR]	1: [TEST0088]Process transaction for TEST00880000 failed: Process transaction check fail
+2023-12-26 02:15:03.029	[INFO]	1: [TEST0088]Start transaction 3 for terminal: TEST00880000
+2023-12-26 02:15:03.313	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880001 success
+2023-12-26 02:15:03.314	[INFO]	1: [TEST0088]Start transaction 4 for terminal: TEST00880001
+2023-12-26 02:15:43.127	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880004 success
+2023-12-26 02:15:43.127	[INFO]	1: [TEST0088]Start transaction 3 for terminal: TEST00880004
+2023-12-26 02:16:11.540	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880003 success
+2023-12-26 02:16:11.541	[INFO]	1: [TEST0088]Start transaction 4 for terminal: TEST00880003
+2023-12-26 02:16:44.512	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880002 success
+2023-12-26 02:16:44.513	[INFO]	1: [TEST0088]Start transaction 5 for terminal: TEST00880002
+2023-12-26 02:17:08.251	[ERROR]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880000 failed: No response from host to PayGreen Hub. Please check customer account to ensure no double charges
+2023-12-26 02:17:08.252	[ERROR]	1: [TEST0088]Process transaction for TEST00880000 failed: Process transaction check fail
+2023-12-26 02:17:08.253	[INFO]	1: [TEST0088]Start transaction 4 for terminal: TEST00880000
+2023-12-26 02:17:08.511	[ERROR]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880001 failed: No response from host to PayGreen Hub. Please check customer account to ensure no double charges
+2023-12-26 02:17:08.512	[ERROR]	1: [TEST0088]Process transaction for TEST00880001 failed: Process transaction check fail
+2023-12-26 02:17:08.512	[INFO]	1: [TEST0088]Start transaction 5 for terminal: TEST00880001
+2023-12-26 02:17:18.401	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880004 success
+2023-12-26 02:17:18.401	[INFO]	1: [TEST0088]Start transaction 4 for terminal: TEST00880004
+2023-12-26 02:17:41.839	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880003 success
+2023-12-26 02:17:41.839	[INFO]	1: [TEST0088]Start transaction 5 for terminal: TEST00880003
+2023-12-26 02:18:19.756	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880002 success
+2023-12-26 02:18:19.756	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880002
+2023-12-26 02:18:58.460	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880000 success
+2023-12-26 02:18:58.460	[INFO]	1: [TEST0088]Start transaction 5 for terminal: TEST00880000
+2023-12-26 02:19:18.745	[ERROR]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880004 failed: No response from host to PayGreen Hub. Please check customer account to ensure no double charges
+2023-12-26 02:19:18.746	[ERROR]	1: [TEST0088]Process transaction for TEST00880004 failed: Process transaction check fail
+2023-12-26 02:19:18.746	[INFO]	1: [TEST0088]Start transaction 5 for terminal: TEST00880004
+2023-12-26 02:19:38.756	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880001 success
+2023-12-26 02:19:38.757	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880001
+2023-12-26 02:20:17.075	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880003 success
+2023-12-26 02:20:17.076	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880003
+2023-12-26 02:20:53.922	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880000 success
+2023-12-26 02:20:53.924	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880000
+2023-12-26 02:21:39.250	[INFO]	ProcessTransaction: [TEST0088]Process transaction check for TEST00880004 success
+2023-12-26 02:21:39.250	[INFO]	1: [TEST0088]Iteration stop goroutine for terminal TEST00880004
